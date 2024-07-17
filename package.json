@@ -1,11 +1,20 @@
 {
   "name": "customer-chat-widget",
   "description": "A customer chat widget for websites, implemented with Vue3 and Tailwind CSS.",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "type": "module",
   "files": [
     "dist"
   ],
+  "main": "./dist/customer-chat-widget.umd.cjs",
+  "module": "./dist/customer-chat-widget.js",
+  "exports": {
+    ".": {
+      "import": "./dist/customer-chat-widget.js",
+      "require": "./dist/customer-chat-widget.umd.cjs"
+    }
+  },
+  "types": "./dist/index.d.ts",
   "author": {
     "name": "monojson",
     "email": "shq.shenhuaqing@gmail.com"
@@ -19,22 +28,19 @@
   },
   "keywords": [
     "customer service",
-    "whatsapp",
-    "chat widget"
+    "chat widget",
+    "whatsapp"
   ],
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
-    "preview": "vite preview",
-    "build-only": "vite build",
-    "type-check": "vue-tsc --build --force",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "vue": "^3.4.29"
   },
   "devDependencies": {
+    "@babel/types": "^7.24.7",
     "@rushstack/eslint-patch": "^1.8.0",
     "@tsconfig/node20": "^20.1.4",
     "@types/node": "^20.14.5",
@@ -51,6 +57,7 @@
     "tailwindcss": "^3.4.4",
     "typescript": "~5.4.0",
     "vite": "^5.3.1",
-    "vue-tsc": "^2.0.21"
+    "vue-tsc": "^2.0.21",
+    "vite-plugin-dts": "^3.9.1"
   }
 }
