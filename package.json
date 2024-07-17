@@ -1,7 +1,27 @@
 {
   "name": "customer-chat-widget",
-  "version": "0.0.1",
+  "description": "A customer chat widget for websites, implemented with Vue3 and Tailwind CSS.",
+  "version": "0.0.2",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "author": {
+    "name": "monojson",
+    "email": "shq.shenhuaqing@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/monojson/customer-chat-widget.git"
+  },
+  "bugs": {
+    "url": "https://github.com/monojson/customer-chat-widget/issues"
+  },
+  "keywords": [
+    "customer service",
+    "whatsapp",
+    "chat widget"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
