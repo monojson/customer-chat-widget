@@ -1,7 +1,7 @@
 {
   "name": "customer-chat-widget",
   "description": "A customer chat widget for websites, implemented with Vue3 and Tailwind CSS.",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "type": "module",
   "files": [
     "dist"
