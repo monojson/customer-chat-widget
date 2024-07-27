@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref, defineProps, computed } from 'vue'
-import { ChatWidgetOptions } from '../types'
+import { WhatsAppOptions } from '../types'
 import { generateGradientStops } from '../utils'
 
-const props = withDefaults(defineProps<ChatWidgetOptions>(), {
+const props = withDefaults(defineProps<WhatsAppOptions>(), {
   position: 'fixed',
   chatSendButtonClickable: true,
   bubbleText: 'Get In Touch',

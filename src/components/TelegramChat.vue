@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref, defineProps, computed } from 'vue'
-import { ChatWidgetOptions } from '../types'
+import { TelegramOptions } from '../types'
 import { generateGradientStops } from '../utils'
 
-const props = withDefaults(defineProps<ChatWidgetOptions>(), {
+const props = withDefaults(defineProps<TelegramOptions>(), {
   position: 'fixed',
   chatSendButtonClickable: true,
   bubbleText: 'Get In Touch',
@@ -12,7 +12,7 @@ const props = withDefaults(defineProps<ChatWidgetOptions>(), {
   chatBoxMessage: 'I checked the website and have some questions.',
   showChatBoxShadow: true,
   chatButtonText: 'Chat With US',
-  phone: 'monojson',
+  username: 'monojson',
   showKfAvatar: true,
   withGradient: false,
   gradientBaseRGB: 'rgb(55,175,226)'
@@ -49,7 +49,7 @@ const toggleChatBox = () => {
 }
 const toChat = () => {
   const encodedMessage = encodeURIComponent(props.chatBoxMessage)
-  const url = `https://t.me/${props.phone}?text=${encodedMessage}`
+  const url = `https://t.me/${props.username}?text=${encodedMessage}`
   window.open(url, '_blank')
 }
 </script>

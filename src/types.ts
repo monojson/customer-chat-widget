@@ -1,4 +1,4 @@
-export interface ChatWidgetOptions {
+export type ChatWidgetOptions = {
   position?: 'static' | 'fixed'
   chatSendButtonClickable?: boolean
   bubbleText?: string
@@ -7,8 +7,15 @@ export interface ChatWidgetOptions {
   chatBoxMessage?: string
   showChatBoxShadow?: boolean
   chatButtonText?: string
-  phone?: string
   showKfAvatar?: boolean
   withGradient?: boolean
   gradientBaseRGB?: string
+}
+
+export type WhatsAppOptions = ChatWidgetOptions & {
+  phone?: string
+}
+
+export type TelegramOptions = ChatWidgetOptions & {
+  username?: string
 }

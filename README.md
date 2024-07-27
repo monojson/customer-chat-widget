@@ -61,7 +61,8 @@ import { TelegramChat } from 'customer-chat-widget';
 | chatBoxMessage          | Set chat box message, this message will be filled in WhatsApp's chat box                    | string            | I checked the website and have some questions. |
 | showChatBoxShadow       | Set chat box shadow                                                                         | boolean           | true                                           |
 | chatButtonText          | Set chat button text                                                                        | string            | Chat With US                                   |
-| phone                   | Set customer service staff's WhatsApp phone or Telegram username                            | string            | +447354255981                                  |
+| phone                   | Set customer service staff's WhatsApp phone                                                 | string            | +447354255981                                  |
+| username                | Set customer service staff's Telegram username                                              | string            | +447354255981                                  |
 | showKfAvatar            | Set customer service staff's avatar                                                         | boolean           | true                                           |
 | withGradient            | Set whether there is a gradient effect to chat send button and chat button background color | boolean           | rgb(191, 81, 254)                              |
 | gradientBaseRGB         | Set chat send button and chat button background color RGB value                             | string            | rgb(191, 81, 254)                              |
