@@ -12,10 +12,10 @@ const props = withDefaults(defineProps<ChatWidgetOptions>(), {
   chatBoxMessage: 'I checked the website and have some questions.',
   showChatBoxShadow: true,
   chatButtonText: 'Chat With US',
-  phone: '+447354255981',
+  phone: 'monojson',
   showKfAvatar: true,
-  withGradient: true,
-  gradientBaseRGB: 'rgb(191, 81, 254)'
+  withGradient: false,
+  gradientBaseRGB: 'rgb(55,175,226)'
 })
 const showChatBox = ref(false)
 const showChatBubble = ref(props.showBubble)
@@ -49,7 +49,7 @@ const toggleChatBox = () => {
 }
 const toChat = () => {
   const encodedMessage = encodeURIComponent(props.chatBoxMessage)
-  const url = `https://api.whatsapp.com/send?phone=${props.phone}&text=${encodedMessage}`
+  const url = `https://t.me/${props.phone}?text=${encodedMessage}`
   window.open(url, '_blank')
 }
 </script>
@@ -66,7 +66,7 @@ const toChat = () => {
       @click="toggleChatBox"
       :style="gradientStyle"
     >
-      <img src="../assets/img/message-icon-lg.svg" />
+      <img src="../assets/img/telegram-icon.svg" />
     </div>
     <div
       v-if="props.showBubble"
